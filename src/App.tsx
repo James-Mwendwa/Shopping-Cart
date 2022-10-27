@@ -1,8 +1,22 @@
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Store from "./pages/Store";
+import { Container } from "react-bootstrap";
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
-    <div className="App">
-     <h2>Shopping Cart</h2>     
-    </div>
+    <>
+      <Navbar />
+      <Container className="mb-4">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/store" element={<Store />} />
+        </Routes>
+      </Container>
+    </>
   );
 }
 
